@@ -24,6 +24,11 @@ app.get('/tasks',(req,res)=>{
     res.json(tasks);
 });
 
+app.get('/',(req,res)=>{
+    const tasks = readTasks();
+    res.json(tasks);
+});
+
 // Get a task by ID
 app.get('/tasks/:id',(req,res)=>{
     const tasks = readTasks();
